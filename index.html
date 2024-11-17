@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <!-- Lightbox CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <title>Intan Dwi Sabila</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Intan <span>Sabila</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="100"><a href="#">Home</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="#about">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#education">Education</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="#skills">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="#portfolio">Portfolio</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="#contact">Contact</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="content" data-aos="fade-left" data-aos-duration="1500">
+                <h1>Hey I'm <span>Intan</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="700">
+                    I'm a <span class="typewriter-text"></span><label for="">|</label>
+                </div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">I,m Web Developer In Banjar West Java Welcome To My Portofolio.</p>
+                <div class="social-links">
+                    <a href="https://github.com/intandws" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://instagram.com/intandw." target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com/in/sabila-intan-10a508333/" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com/sabilaintan33" target="_blank" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1600"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <div class="btn" data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="1800">
+
+                    <button onclick="location.href='#about'">Hire me</button>
+                    <button onclick="document.getElementById('pdf-link').click();">Download CV</button>
+                
+                    <a id="pdf-link" href="Riwayat hidup CV.pdf" download></a> <!-- Tautan tersembunyi untuk mengunduh CV -->
+                
+                </div>
+            </div>
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="sabila.jpg" alt="Intan's photo">
+            </div>
+        </div>
+    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+
+    <section id="about">
+        <div class="about-title">About Me</div>
+        <div class="about-container">
+            <div class="about-text">
+                <p>Hello, my name is <strong><span class="highlighted-name">Intan Dwi Sabila</span></strong>. I am currently a student at <strong><span class="highlighted-school">SMKN 1 BANJAR</span></strong>, where I am working to develop my skills in technology, design, and web development. My passion for learning and creativity drives me to pursue knowledge in various aspects of programming and design. Through academic work and personal projects, I strive to improve my technical skills and contribute to the tech industry in the future.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section id="education">
+        <div class="education-title">Education</div>
+        <div class="education-container">
+            <div class="education-box" data-aos="fade-up">
+                <h3>SDN 2 Mekarharja</h3>
+                <p>Sekolah Dasar dengan fokus pada pendidikan dasar dan pengembangan karakter dan memberikan pendidikan dasar dengan fasilitas yang cukup mendukung,terampil.</p>
+            </div>
+            <div class="education-box" data-aos="fade-up" data-aos-delay="200">
+                <h3>SMPN 7 Banjar</h3>
+                <p>Sekolah Menengah Pertama mendukung perkembangan akademik dan sosial siswa, serta fasilitas yang memadai untuk menunjang kegiatan belajar mengajar.</p>
+            </div>
+            <div class="education-box" data-aos="fade-up" data-aos-delay="400">
+                <h3>SMKN 1 Banjar</h3>
+                <p>Sekolah Menengah Kejuruan dengan jurusan yang berfokus pada keahlian praktis dan profesional untuk mempersiapkan siswa menjadi tenaga yang terampil.</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+<section id="skills">
+    <div class="skills-title">Skills</div>
+    <div class="skills-container">
+        <div class="skill">
+            <h3>HTML</h3>
+            <div class="skill-bar">
+                <div class="skill-percentage" style="width: 5%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>CSS</h3>
+            <div class="skill-bar">
+                <div class="skill-percentage" style="width: 55%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Bootstrap</h3>
+            <div class="skill-bar">
+                <div class="skill-percentage" style="width: 30%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>JavaScript</h3>
+            <div class="skill-bar">
+                <div class="skill-percentage" style="width: 45%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <h3>Web Design</h3>
+            <div class="skill-bar">
+                <div class="skill-percentage" style="width: 70%"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="portfolio">
+    <h2 class="portfolio-title">Portofolio</h2>
+    <div class="portfolio-container">
+        <div class="portfolio-item" data-aos="fade-up">
+            <a href="poto projek 1.jpg" data-lightbox="portfolio">
+                <img src="poto projek 1.jpg" alt="Project 1" class="zoomable">
+            </a>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+            <a href="poto projek 2.jpg" data-lightbox="portfolio">
+                <img src="poto projek 2.jpg" alt="Project 2" class="zoomable">
+            </a>
+        </div>
+        <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+            <a href="poto projek 3.jpg" data-lightbox="portfolio">
+                <img src="poto projek 3.jpg" alt="Project 3" class="zoomable">
+            </a>
+        </div>
+        <div class="portfolio-item full-width" data-aos="fade-up" data-aos-delay="600">
+            <a href="poto biodata diri.jpg" data-lightbox="portfolio">
+                <img src="poto biodata diri.jpg" alt="Project 4" class="zoomable">
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container" style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 20px;">
+        <div class="contact-info" style="flex: 1; min-width: 300px;">
+            <h1>Contact Me</h1>
+            <p>Address: Randegan 2 RT 10 RW 05, Desa Mekarharja, Kecamatan Purwaharja, Kota Banjar, West Java</p>
+            <p>Email: intandwisabila@gmail.com</p>
+            <div style="margin: 20px 0;">
+                <div style="position: relative; width: 100%; height: 300px; margin: 20px 0; border-radius: 8px; overflow: hidden;">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.489993530393!2d108.5727068!3d-7.3518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMjEnMDYuNSJTIDEwOMKwMzQnMzEuMCJF!5e0!3m2!1sen!2sid!4v1633009092321!5m2!1sen!2sid" 
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <a href="https://www.google.com/maps/place/-7.3518,108.5727068" target="_blank" 
+                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 10;">
+                        <!-- Lapisan yang dapat diklik -->
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="contact-form" style="flex: 1; min-width: 300px;">
+            <input type="text" placeholder="Your Name" style="width: 100%; margin-bottom: 10px;">
+            <input type="email" placeholder="Your Email" style="width: 100%; margin-bottom: 10px;">
+            <input type="text" placeholder="Subject" style="width: 100%; margin-bottom: 10px;">
+            <textarea placeholder="Message" style="width: 100%; margin-bottom: 10px;"></textarea>
+            <button style="width: 100%; padding: 10px;">Submit</button>
+           
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div id="copyright" style="text-align: center; margin-top: 20px; padding: 10px 0;">
+        &copy; 2024. <b>Intan Copyright</b> All Rights Reserved.
+    </div>
+    
+</footer>
+
+<a href="#" id="back-to-top" title="Back to Top" style="display: none;">
+    <i class="fas fa-arrow-up"></i>
+</a>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script>
+    $(window).on('load', function () {
+        // Fade out the preloader after the whole page has loaded
+        $(".preloader").fadeOut("slow");
+
+        // Hamburger menu toggle
+        $("#hamburger").click(function () {
+            $("#nav-menu").toggleClass("show");
+            $(this).toggleClass("active");
+        });
+
+        // Close the menu when a menu item is clicked
+        $("#nav-menu li a").click(function () {
+            $("#nav-menu").removeClass("show");
+            $("#hamburger").removeClass("active");
+        });
+
+        $(document).click(function (event) {
+            if (!$(event.target).closest("#hamburger, #nav-menu").length) {
+                if ($("#nav-menu").hasClass("show")) {
+                    $("#nav-menu").removeClass("show");
+                    $("#hamburger").removeClass("active");
+                }
+            }
+        });
+    });
+</script>
+
+<script>
+    window.onscroll = function () {
+        var backToTopButton = document.getElementById("back-to-top");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    // Smooth scroll to the top
+    document.getElementById("back-to-top").onclick = function (event) {
+        event.preventDefault(); // Prevent default anchor click behavior
+        // Use the scrollTo method for smooth scrolling
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // Enables smooth scrolling
+        });
+    };
+</script>
+
+</body>
+</html>

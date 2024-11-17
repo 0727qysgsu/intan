@@ -1,0 +1,905 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+nav{
+    width: 100%;
+    height: 10vh;
+    position: sticky;
+}
+
+.nav-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.logo span{
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.hamburg,
+.cancel{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: white;
+    display: none;
+    font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links{
+    display: flex;
+}
+
+.nav-container .links a{
+    position: relative;
+    font-size: 1.2rem;
+    color: white;
+    margin: 0 20px;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
+}
+
+.nav-container .links a::before{
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #b74b4b;
+    transition: 0.2s linear;
+}
+
+.nav-container .links a:hover::before{
+    width: 100%;
+}
+
+.nav-container .links a:hover{
+    color: #b74b4b;
+}
+
+.dropdown{
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    transform: translateY(-500px);
+    width: 100%;
+    height: auto;
+    backdrop-filter: blur(4px) brightness(40%);
+    box-shadow:  0 0 20px black;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    justify-content: center;
+    padding: 15px 0;
+    align-items: center;
+    transition: 0.2s linear;
+}
+
+.dropdown .links a:hover{
+    background-color: #b74b4b;
+}
+
+section{
+    width: 100%;
+    height: 90vh;
+}
+
+.main-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.main-container .image{
+    width: 500px;
+    height: 80vh;
+    border-radius: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 50px #b74b4b;
+}
+
+.main-container .image img{
+    width: 100%;
+}
+
+.main-container .image:hover{
+    animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%{
+        scale: 1;
+    }
+    
+    50%{
+        scale: 1.05;
+    }
+    
+    100%{
+        scale: 1;
+    }
+}
+
+.main-container .content{
+    color: white;
+    width: 40%;
+    min-height: 100px;
+}
+
+.content h1{
+    font-size: clamp(1rem, 1rem + 5vw, 1.8rem);
+}
+
+.content h1 span{
+    color: #b74b4b;
+    text-shadow: 0  0 10px #b74b4b;
+}
+
+.content .typewriter{
+    font-size: clamp(1rem, 1rem + 5vw, 2.5rem);
+    font-weight: 600;
+}
+
+.content .typewriter-text{
+    color: #b74b4b;
+    text-shadow: 0 0 10px #b74b4b;
+}
+
+.content p{
+    font-size: clamp(0.4rem , 0.2rem + 9vw, 1rem);
+    margin: 10px 0;
+}
+
+.social-links i{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    background-color: transparent;
+    border: 0.2rem solid #b74b4b;
+    border-radius: 50%;
+    color: #b74b4b;
+    margin: 5px 15px;
+    font-size: 1.5rem;
+    transition: 0.2s linear;
+}
+
+.social-links i:hover{
+    scale: 1.3;
+    color: black;
+    background-color: #b74b4b;
+    filter: drop-shadow(0 0 10px #b74b4b);
+}
+
+.content button{
+    width: 50%;
+    height: 6vh;
+    margin: 30px;
+    background-color: #b74b4b;
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 120%;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: 0.2s linear;
+}
+
+.content button:hover{
+    scale: 1.1;
+    color: #b74b4b;
+    border: 2px solid #b74b4b;
+    background-color: transparent;
+    font-weight: 700;
+    box-shadow: 0 0 40px #b74b4b;
+}
+
+@media (max-width:884px) {
+    nav .logo{
+        position: absolute;
+        top: 16px;
+        left: 15px;
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links{
+        display: none;
+    }
+
+    .hamburg,
+    .cancel{
+        display: block;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .social-links i{
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+
+    .main-container .image{
+        z-index: -1;
+        width: 50%;
+        height: 60%;
+    }
+}
+
+@media (max-width:440px){
+    .main-container .image{
+        width: 50%;
+        height: 60%;
+        margin-bottom: 0px;
+    }
+
+    .main-container .content{
+        width: 80%;
+    }
+
+    .main-container button{
+        margin-top: 15px;
+    }
+}
+
+#about, #education, #skills, #portfolio, #contact {
+    padding: 50px;
+    background-color: #121212;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.about-container img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.about-text {
+    max-width: 500px;
+}
+
+.about-text h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+.education-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: white; /* Warna judul */
+}
+
+.education-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.education-box {
+    width: 30%;
+    overflow: hidden;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.education-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.education-box:hover {
+    transform: scale(1.05);
+}
+
+.education-caption {
+    font-size: 18px;
+    font-weight: bold; /* Menjadikan teks bold */
+    margin-top: 10px;
+    color: white; /* Mengubah warna teks menjadi putih */
+    background-color: rgba(0, 0, 0, 0.7); /* Memberikan latar belakang semi-transparan */
+    padding: 5px; /* Memberikan padding agar teks lebih rapi */
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+}
+
+
+.skills-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.skill-percentage {
+    height: 20px;
+    background-color: #007bff;
+    border-radius: 10px;
+}
+
+#portfolio .portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+#contact .contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.skill-percentage {
+    background-color: #b74b4b;
+    height: 100%;
+    transition: width 1s ease-in-out;
+}
+
+.btn {
+    display: flex;
+    gap: 5px; /* Mengurangi jarak antara tombol */
+    justify-content: center; /* Agar tombol berada di tengah */
+    align-items: center; /* Menyelaraskan tombol secara vertikal */
+}
+
+button {
+    padding: 8px 12px; /* Ruang dalam tombol yang proporsional */
+    font-size: 16px; /* Ukuran teks */
+    border: none; /* Menghilangkan border */
+    background-color: #ca5959; /* Warna tombol */
+    color: white; /* Warna teks */
+    cursor: pointer; /* Menunjukkan tombol bisa diklik */
+    border-radius: 5px; /* Sudut tombol melengkung */
+    width: auto; /* Lebar tombol mengikuti teks */
+    text-align: center; /* Teks di tengah */
+    white-space: nowrap; /* Mencegah teks terpotong menjadi baris baru */
+    box-sizing: border-box; /* Memastikan padding tidak memengaruhi ukuran tombol */
+    display: inline-block; /* Agar tombol tidak mengambil ruang penuh */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    button {
+        font-size: 14px; /* Ukuran teks lebih kecil untuk layar kecil */
+        padding: 6px 10px; /* Padding yang lebih kecil di perangkat mobile */
+    }
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202020; /* Warna latar belakang */
+    color: #fff; /* Warna teks */
+    margin: 0;
+    padding: 0;
+}
+
+#education {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.education-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px; /* Kurangi jarak judul ke kontainer */
+    color: #fff;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Kurangi jarak antar kolom */
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.education-box {
+    background: #303030; /* Warna kotak */
+    border: 2px solid #e78383; /* Warna border */
+    border-radius: 12px;
+    padding: 15px; /* Kurangi padding untuk efisiensi ruang */
+    box-sizing: border-box;
+    width: calc(33.333% - 15px); /* Kurangi jarak horizontal antar kolom */
+    text-align: left;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.education-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(245, 171, 233, 0.5); /* Kurangi intensitas bayangan */
+}
+
+.education-box h3 {
+    margin: 0 0 8px 0; /* Kurangi jarak antar heading */
+    font-size: 1.5rem;
+    color: #e78383;
+}
+
+.education-box p {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    color: #d9d9d9;
+}
+
+.education-box p strong {
+    font-size: 1.1rem;
+    color: #e78383;
+}
+
+/* Responsivitas untuk tampilan mobile */
+@media (max-width: 768px) {
+    .education-container {
+        flex-direction: column; /* Kolom berjajar vertikal */
+        gap: 10px; /* Kurangi jarak antar elemen */
+    }
+
+    .education-box {
+        flex: 1 1 100%;
+        max-width: 100%; /* Lebar penuh di mobile */
+    }
+
+    .education-title {
+        font-size: 1.8rem; /* Ukuran lebih kecil di mobile */
+    }
+
+    .education-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .education-box p {
+        font-size: 1rem;
+    }
+}
+
+#portfolio {
+    padding: 20px;
+    text-align: center;
+}
+
+.portfolio-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio-item {
+    flex: 1 1 30%; /* 3 kolom sejajar */
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-container {
+    flex-direction: column;
+}
+.portfolio-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+}
+
+.portfolio-item.full-width {
+    flex: 1 1 100%; /* 1 kolom penuh di bagian bawah */
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Efek zoom */
+    border-radius: 10px;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.portfolio-item::after {
+    content: "+";
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.portfolio-item:hover::after {
+    opacity: 1; /* Menampilkan efek "+" saat hover */
+}
+
+.portfolio-container .portfolio-item:nth-child(4) {
+    flex: 1 1 100%; /* Kolom penuh untuk gambar terakhir */
+}
+
+
+
+/* General section styling */
+#about {
+    background-color: #121212;
+    color: #f1f1f1;
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Title styling */
+.about-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Container and text alignment */
+.about-container {
+    max-width: 800px; /* Restricts the width to ensure neatness */
+    margin: 0 auto;
+    background-color: #ca5959;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+}
+
+/* Paragraph text styling */
+.about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6; /* Adjusted for better readability */
+    margin: 20px 0; /* Adds space between paragraphs */
+    text-align: justify; /* Justifies text for a clean edge */
+    padding: 10px;
+}
+
+/* Highlighted text styles */
+.highlighted-name, .highlighted-school {
+    color: #c02424;
+    font-weight: bold;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    .about-title {
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1.1rem;
+    }
+}
+
+#back-to-top {
+    display: none; /* Tombol disembunyikan secara default */
+    position: fixed;
+    bottom: 20px; /* Jarak dari bagian bawah layar */
+    right: 20px; /* Jarak dari bagian kanan layar */
+    z-index: 99; /* Pastikan tombol muncul di atas elemen lain */
+    background-color: #ca5959; /* Warna background */
+    color: white; /* Warna ikon panah */
+    width: 50px; /* Tinggi dan lebar yang sama untuk lingkaran */
+    height: 50px; 
+    text-align: center; /* Menempatkan ikon di tengah */
+    line-height: 50px; /* Mengatur ikon agar vertikal di tengah */
+    border-radius: 50%; /* Membuat tombol berbentuk lingkaran */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    font-size: 24px; /* Ukuran ikon panah */
+  }
+  
+  #back-to-top:hover {
+    background-color: #ca5959; /* Warna background saat di-hover */
+  }
+
+  @media (max-width: 768px) {
+    .home-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .home-button {
+        position: fixed;
+        bottom: 20px;
+        width: 100%;
+        max-width: 500px;
+    }
+}
+
+      /* Style tombol */
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        margin: 10px;
+        border: none;
+        background-color: #ca5959; /* Warna peach */
+        color: white;
+        cursor: pointer;
+        border-radius: 5px;
+        /* Sesuaikan lebar tombol */
+        width: 150px; /* Atur lebar tombol sesuai kebutuhan */
+    }
+
+    /* Membuat teks dalam tombol download */
+    .download-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        font-size: 16px;
+        /* Menyesuaikan lebar untuk merata dengan tombol lain */
+        width: 150px; /* Sesuaikan lebar ini agar sesuai */
+    }
+
+    /* Container untuk tombol */
+    .button-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    /* Gaya khusus untuk tampilan mobile */
+    @media (max-width: 768px) {
+        .button-container {
+            flex-direction: column;
+        }
+
+        button {
+            width: 90%; /* Menyesuaikan lebar tombol pada mobile */
+        }
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 5px;
+        cursor: pointer;
+        border: none; /* Menghilangkan border tombol */
+        background-color: #007BFF; /* Warna latar belakang tombol */
+        color: white; /* Warna teks */
+        font-size: 16px; /* Ukuran font */
+    }
+
+    button:hover {
+        background-color: #0056b3; /* Warna saat hover */
+    }
+
+    #pdf-link {
+        display: none; /* Sembunyikan link download */
+    }
+
+    /* Responsive */
+@media (max-width:884px) {
+    nav .logo {
+        font-size: 1.5rem;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-container .links {
+        display: none;
+    }
+
+    .hamburg, .cancel {
+        display: block;
+    }
+}
+
+@media (max-width:440px) {
+    .main-container .image {
+        width: 50%;
+        height: 60%;
+    }
+
+    .main-container .content {
+        width: 80%;
+    }
+}
+
+/* Media query untuk ukuran layar yang lebih kecil */
+@media (max-width: 768px) {
+    /* Responsif Education */
+    .education-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .education-box {
+        width: 90%; /* Agar box education lebih kecil di layar kecil */
+        margin: 10px 0;
+    }
+
+    .education-box img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    /* Responsif Portfolio */
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .portfolio-item {
+        width: 100%; /* Sesuaikan lebar item */
+        margin: auto;
+    }
+
+    .portfolio-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+}
+
+/* Media query untuk layar ukuran medium */
+@media (max-width: 1024px) {
+    /* Education */
+    .education-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom untuk ukuran medium */
+        gap: 15px;
+    }
+
+    /* Portfolio */
+    .portfolio-container {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom di ukuran medium */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Responsif Education */
+    .education-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .education-box {
+        width: 90%; /* Membuat kotak pendidikan lebih lebar untuk layar kecil */
+        margin-bottom: 20px;
+    }
+
+    /* Responsif untuk tombol */
+    .button-container {
+        flex-direction: column;
+        align-items: stretch; /* Agar tombol memenuhi lebar */
+    }
+
+    button {
+        width: 100%; /* Tombol penuh pada layar kecil */
+    }
+
+    /* Responsif Portfolio */
+    .portfolio-container {
+        grid-template-columns: 1fr; /* Satu kolom untuk layar kecil */
+        gap: 15px; /* Jarak antar elemen lebih kecil */
+    }
+
+    .portfolio-item {
+        width: 100%; /* Item portfolio memenuhi lebar */
+    }
+}
